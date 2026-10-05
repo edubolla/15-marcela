@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Marcela 15 anos</title>
+  <meta name="description" content="Você está convidado para o baile de máscaras dos 15 anos da Marcela, 06 de novembro de 2026.">
+  <meta name="theme-color" content="#2a0f0c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marcela 15 anos">
+  <meta property="og:description" content="Baile de máscaras · Sexta, 06 de novembro de 2026 · 20h30">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c9a13b'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%235a3a0a'%3EM%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@600&family=Great+Vibes&family=Josefin+Sans:wght@300;400&family=Parisienne&family=Playfair+Display:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/img/envelope.jpg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+  <!-- ============ ENVELOPE (tela 1) ============ -->
+  <section class="envelope" id="envelope" aria-label="Convite fechado">
+    <button class="envelope__btn" id="openInvite" aria-label="Toque para abrir o convite">
+      <img class="envelope__img" src="assets/img/envelope.jpg" alt="Envelope com selo de cera dourado com a letra M, ao lado de uma máscara veneziana">
+      <span class="envelope__glow" aria-hidden="true"></span>
+    </button>
+  </section>
+
+  <!-- ============ CONVITE (tela 2) ============ -->
+  <main class="invite paper" id="invite" aria-hidden="true">
+
+    <header class="hero">
+      <div class="hero__photo">
+        <img src="assets/img/marcela.jpg" alt="Foto da Marcela">
+      </div>
+
+      <button class="vinyl" id="musicToggle" aria-label="Clique e escute a música" aria-pressed="false">
+        <svg class="vinyl__disc" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="vinylShine" cx="35%" cy="30%" r="75%">
+              <stop offset="0" stop-color="#c8414c"/>
+              <stop offset=".55" stop-color="#9e1b27"/>
+              <stop offset="1" stop-color="#6e0f18"/>
+            </radialGradient>
+          </defs>
+          <circle cx="50" cy="50" r="49" fill="url(#vinylShine)"/>
+          <g fill="none" stroke="#000" stroke-opacity=".18" stroke-width=".5">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="40"/>
+            <circle cx="50" cy="50" r="36"/><circle cx="50" cy="50" r="32"/>
+            <circle cx="50" cy="50" r="28"/><circle cx="50" cy="50" r="24"/>
+          </g>
+          <path d="M22 30 A34 34 0 0 1 40 17" stroke="#fff" stroke-opacity=".35" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M78 70 A34 34 0 0 1 60 83" stroke="#fff" stroke-opacity=".2" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="17" fill="#f6eee0"/>
+          <circle cx="50" cy="50" r="15.5" fill="none" stroke="#b59a6a" stroke-width=".4"/>
+          <circle cx="50" cy="50" r="1.6" fill="#9e1b27"/>
+        </svg>
+        <svg class="vinyl__label" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><path id="vinylArc" d="M 25 40 A 68 68 0 1 0 135 40"/></defs>
+          <text><textPath href="#vinylArc" startOffset="50%" text-anchor="middle">Clique e escute a música</textPath></text>
+        </svg>
+      </button>
+
+      <h1 class="hero__name">Marcela</h1>
+      <p class="hero__quote">Entre tudo o que já vivi e a imensidão do que ainda quero viver, existe uma noite que merece ser lembrada para sempre.</p>
+    </header>
+
+    <section class="when" aria-label="Data e local">
+      <img class="deco deco--mask-left" src="assets/img/mask-left.png" alt="" aria-hidden="true">
+      <svg class="chevrons" viewBox="0 0 160 280" aria-hidden="true">
+        <defs><path id="chev" d="M3 3 H30 L80 60 L130 3 H157 L80 91 Z"/></defs>
+        <g fill="none" stroke="#a3121c" stroke-width="2.2" stroke-linejoin="miter">
+          <use href="#chev"/><use href="#chev" y="92"/><use href="#chev" y="184"/>
+        </g>
+      </svg>
+
+      <h2 class="when__lead">Irá acontecer em...</h2>
+
+      <div class="date">
+        <span class="date__month">Novembro</span>
+        <div class="date__row">
+          <span class="date__side">Sexta</span>
+          <span class="date__day">06</span>
+          <span class="date__side">20:30h</span>
+        </div>
+        <span class="date__year">2026</span>
+      </div>
+
+      <img class="deco deco--mask-right" src="assets/img/mask-right.png" alt="" aria-hidden="true">
+
+      <a class="place" id="placeLink" href="#" target="_blank" rel="noopener">
+        <span class="place__label">Local:</span>
+        <span class="place__name">Buffet Castelo</span>
+        <span class="place__addr">R. Amazonas, 1320 - Oswaldo Cruz,</span>
+        <span class="place__addr">São Caetano do Sul - SP</span>
+      </a>
+    </section>
+
+    <section class="actions" aria-label="Ações">
+      <p class="actions__hint">Toque nos ícones <img src="assets/img/hand.png" alt="" aria-hidden="true"></p>
+      <p class="actions__script">Para interagir</p>
+
+      <ul class="actions__list">
+        <li>
+          <a class="action" id="rsvpLink" href="#" target="_blank" rel="noopener">
+            <span class="action__icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="27"/><circle cx="30" cy="24" r="7.5"/><path d="M17 45c0-6.5 5.8-11 13-11 2.6 0 5 .6 7 1.6"/><path d="M17 45h18"/><path d="M37 42l4.5 4.5L50 37"/></g></svg>
+            </span>
+            <span class="action__text">Para confirmar sua presença<small id="rsvpDeadline"></small></span>
+          </a>
+        </li>
+        <li>
+          <a class="action" id="mapLink" href="#" target="_blank" rel="noopener">
+            <span class="action__icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M32 6c-10 0-17.5 7.6-17.5 17.4C14.5 36 32 58 32 58s17.5-22 17.5-34.6C49.5 13.6 42 6 32 6zm0 24.5a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6z"/></svg>
+            </span>
+            <span class="action__text action__text--link">Saiba como chegar no local</span>
+          </a>
+        </li>
+        <li>
+          <a class="action" href="#presentes" data-panel="presentes">
+            <span class="action__icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"><rect x="10" y="24" width="44" height="10" rx="1.5"/><rect x="14" y="34" width="36" height="22" rx="1.5"/><path d="M28 24v32M36 24v32"/><path d="M32 23c-3-8-14-11-14-4 0 4 7 5 14 4zM32 23c3-8 14-11 14-4 0 4-7 5-14 4z"/></g></svg>
+            </span>
+            <span class="action__text">Sugestão de presente</span>
+          </a>
+        </li>
+        <li>
+          <a class="action" href="#manual" data-panel="manual">
+            <span class="action__icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M14 8h30a2 2 0 0 1 2 2v20M14 8a3 3 0 0 0-3 3v42a3 3 0 0 0 3 3h22"/><path d="M11 50a3 3 0 0 1 3-3h20"/><path d="M18 42h6" stroke-linecap="round"/><circle cx="45" cy="44" r="11"/><path d="M40 44l3.6 3.6L50.5 40.5" stroke-linecap="round"/></g><text x="28" y="20" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="7.6" text-anchor="middle" fill="currentColor" letter-spacing=".3">MANUAL</text></svg>
+            </span>
+            <span class="action__text">Manual do convidado</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="reminder" aria-label="Lembrete">
+      <div class="reminder__frame">
+        <h2 class="reminder__title">Não se esqueça:</h2>
+        <p class="reminder__text">O tema da festa é baile de máscaras, portanto, leve a sua e se divirta a noite inteira!</p>
+      </div>
+    </section>
+
+    <img class="floral floral--bottom" src="assets/img/floral-bottom.png" alt="" aria-hidden="true">
+  </main>
+
+  <!-- ============ MANUAL DO CONVIDADO (tela 3) ============ -->
+  <section class="panel paper" id="manual" role="dialog" aria-modal="true" aria-labelledby="manualTitle" hidden>
+    <button class="panel__close" data-close aria-label="Voltar ao convite">&times;</button>
+    <img class="floral floral--top" src="assets/img/floral-top.png" alt="" aria-hidden="true">
+    <div class="panel__body">
+      <h2 class="panel__title" id="manualTitle">Manual do convidado:</h2>
+      <ul class="manual__list">
+        <li>Não atrapalhe o fotógrafo.</li>
+        <li>Confirme sua presença.</li>
+        <li>Chegue cedo para aproveitar muito!</li>
+        <li>Você é meu convidado especial, então lembre-se que convidado não convida.</li>
+        <li>Peço que evitem o uso dessas cores: Dourado/amarelo, marsala e azul marinho.</li>
+        <li>Tire fotos e marque a debutante nas redes sociais.</li>
+      </ul>
+      <p class="manual__closing">Se divirta, aproveite muito a festa e fique até o final!</p>
+      <p class="manual__dress">Traje indicado: esporte fino.</p>
+      <button class="panel__back" data-close>Voltar ao convite</button>
+    </div>
+    <img class="floral floral--bottom" src="assets/img/floral-bottom.png" alt="" aria-hidden="true">
+  </section>
+
+  <!-- ============ SUGESTÕES DE PRESENTE (tela 4) ============ -->
+  <section class="panel paper" id="presentes" role="dialog" aria-modal="true" aria-labelledby="giftsTitle" hidden>
+    <button class="panel__close" data-close aria-label="Voltar ao convite">&times;</button>
+    <img class="floral floral--top" src="assets/img/floral-top.png" alt="" aria-hidden="true">
+    <div class="panel__body">
+      <h2 class="panel__title" id="giftsTitle">Sugestões de presente</h2>
+      <p class="gifts__intro">Sua presença é o meu maior presente, mas aqui estão algumas sugestões do que você pode me presentear:</p>
+      <ul class="gifts">
+        <li class="gift"><img src="assets/img/gift-clothes.png" alt=""><span>Eu visto M</span></li>
+        <li class="gift"><img src="assets/img/gift-shoes.png" alt=""><span>Eu calço nº 35</span></li>
+        <li class="gift"><img src="assets/img/gift-necklace.png" alt=""><span>Acessórios (dourados): brincos, colares, anéis, pulseiras.</span></li>
+        <li class="gift"><img src="assets/img/gift-makeup.png" alt=""><span>Maquiagem</span></li>
+        <li class="gift"><img src="assets/img/gift-camera.png" alt=""><span>Câmera digital</span></li>
+        <li class="gift"><img src="assets/img/gift-castle.png" alt=""><span>Itens e produtos Disney</span></li>
+      </ul>
+      <button class="panel__back" data-close>Voltar ao convite</button>
+    </div>
+    <img class="floral floral--bottom" src="assets/img/floral-bottom.png" alt="" aria-hidden="true">
+  </section>
+
+  <audio id="music" src="assets/audio/musica.mp3" preload="none" loop></audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
