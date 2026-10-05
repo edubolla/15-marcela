@@ -2,9 +2,8 @@
 const CONFIG = {
   // Número do WhatsApp com DDI + DDD, só dígitos (ex.: "5511999998888").
   // Vazio: o WhatsApp abre com a mensagem pronta e a pessoa escolhe o contato.
-  whatsapp: "",
-  rsvpMessage:
-    "Olá, confirmo a minha presença nos 15 anos da Marcela. Até lá!\n\nMeu nome completo:",
+  whatsapp: "5511985283358",
+  rsvpMessage: "Olá! Passando para confirmar minha presença na festa!",
   rsvpDeadline: "Confirme até 31 de outubro",
   mapsQuery: "Buffet Castelo, R. Amazonas, 1320 - Oswaldo Cruz, São Caetano do Sul - SP",
 };
