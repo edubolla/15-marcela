@@ -187,6 +187,13 @@
     <img class="floral floral--bottom" src="assets/img/floral-bottom.png" alt="" aria-hidden="true">
   </section>
 
+  <div class="player" id="player" hidden>
+    <button class="player__btn" id="playerToggle" aria-label="Pausar a música">
+      <svg class="player__icon player__icon--pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="5" width="3.6" height="14" rx="1"/><rect x="13.9" y="5" width="3.6" height="14" rx="1"/></svg>
+      <svg class="player__icon player__icon--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.2v13.6a.8.8 0 0 0 1.2.7l10.6-6.8a.8.8 0 0 0 0-1.4L9.2 4.5A.8.8 0 0 0 8 5.2z"/></svg>
+    </button>
+  </div>
+
   <audio id="music" src="assets/audio/musica.mp3" preload="none" loop></audio>
 
   <script src="js/main.js"></script>

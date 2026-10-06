@@ -21,10 +21,19 @@ $("#placeLink").href = mapsUrl;
 /* ----- Música ----- */
 const audio = $("#music");
 const vinyl = $("#musicToggle");
+const player = $("#player");
+const playerBtn = $("#playerToggle");
 
 function setPlaying(on) {
   vinyl.classList.toggle("is-playing", on);
   vinyl.setAttribute("aria-pressed", String(on));
+  player.classList.toggle("is-playing", on);
+  playerBtn.setAttribute("aria-label", on ? "Pausar a música" : "Tocar a música");
+}
+
+function toggleMusic() {
+  if (audio.paused) playMusic();
+  else audio.pause();
 }
 
 function playMusic() {
@@ -35,9 +44,29 @@ function playMusic() {
 audio.addEventListener("pause", () => setPlaying(false));
 audio.addEventListener("play", () => setPlaying(true));
 
-vinyl.addEventListener("click", () => {
-  if (audio.paused) playMusic();
-  else audio.pause();
+vinyl.addEventListener("click", toggleMusic);
+playerBtn.addEventListener("click", toggleMusic);
+
+// controle do rodapé: aparece 5s depois de abrir o convite,
+// a partir do momento em que a música já começou a tocar
+const PLAYER_DELAY = 5000;
+let openedAt = null;
+let hasPlayed = false;
+let playerTimer = null;
+
+function maybeShowPlayer() {
+  if (!hasPlayed || openedAt === null || player.classList.contains("is-visible")) return;
+  clearTimeout(playerTimer);
+  const wait = Math.max(0, openedAt + PLAYER_DELAY - Date.now());
+  playerTimer = setTimeout(() => {
+    player.hidden = false;
+    requestAnimationFrame(() => player.classList.add("is-visible"));
+  }, wait);
+}
+
+audio.addEventListener("playing", () => {
+  hasPlayed = true;
+  maybeShowPlayer();
 });
 
 /* ----- Envelope ----- */
@@ -55,6 +84,8 @@ function openInvite() {
     document.body.classList.add("is-open");
     invite.removeAttribute("aria-hidden");
     window.scrollTo(0, 0);
+    openedAt = Date.now();
+    maybeShowPlayer();
   }, 650);
 }
 
@@ -114,5 +145,6 @@ if (location.hash === "#manual" || location.hash === "#presentes") {
   envelope.classList.add("is-open");
   document.body.classList.add("is-open");
   invite.removeAttribute("aria-hidden");
+  openedAt = Date.now();
   openPanel(id);
 }
