@@ -47,26 +47,16 @@ audio.addEventListener("play", () => setPlaying(true));
 vinyl.addEventListener("click", toggleMusic);
 playerBtn.addEventListener("click", toggleMusic);
 
-// controle do rodapé: aparece 5s depois de abrir o convite,
-// a partir do momento em que a música já começou a tocar
-const PLAYER_DELAY = 5000;
-let openedAt = null;
-let hasPlayed = false;
+// controle do rodapé: aparece 7s depois que a música começa a tocar
+const PLAYER_DELAY = 7000;
 let playerTimer = null;
 
-function maybeShowPlayer() {
-  if (!hasPlayed || openedAt === null || player.classList.contains("is-visible")) return;
-  clearTimeout(playerTimer);
-  const wait = Math.max(0, openedAt + PLAYER_DELAY - Date.now());
+audio.addEventListener("playing", () => {
+  if (playerTimer) return;
   playerTimer = setTimeout(() => {
     player.hidden = false;
     requestAnimationFrame(() => player.classList.add("is-visible"));
-  }, wait);
-}
-
-audio.addEventListener("playing", () => {
-  hasPlayed = true;
-  maybeShowPlayer();
+  }, PLAYER_DELAY);
 });
 
 /* ----- Envelope ----- */
@@ -84,8 +74,6 @@ function openInvite() {
     document.body.classList.add("is-open");
     invite.removeAttribute("aria-hidden");
     window.scrollTo(0, 0);
-    openedAt = Date.now();
-    maybeShowPlayer();
   }, 650);
 }
 
@@ -145,6 +133,5 @@ if (location.hash === "#manual" || location.hash === "#presentes") {
   envelope.classList.add("is-open");
   document.body.classList.add("is-open");
   invite.removeAttribute("aria-hidden");
-  openedAt = Date.now();
   openPanel(id);
 }
