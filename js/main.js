@@ -16,6 +16,7 @@ $("#rsvpLink").href = `${waBase}?text=${encodeURIComponent(CONFIG.rsvpMessage)}`
 $("#rsvpDeadline").textContent = CONFIG.rsvpDeadline;
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.mapsQuery)}`;
+$("#mapLink").href = mapsUrl;
 $("#placeLink").href = mapsUrl;
 
 /* ----- Música ----- */
