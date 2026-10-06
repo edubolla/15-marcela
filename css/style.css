@@ -392,7 +392,6 @@ body.is-open .invite { opacity: 1; }
   font-size: calc(var(--u) * 10.5);
   line-height: 1;
   color: var(--red-soft);
-  rotate: -2deg;
 }
 
 .actions__list {

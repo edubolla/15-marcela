@@ -4,7 +4,7 @@ const CONFIG = {
   // Vazio: o WhatsApp abre com a mensagem pronta e a pessoa escolhe o contato.
   whatsapp: "5511985283358",
   rsvpMessage: "Olá! Passando para confirmar minha presença na festa!",
-  rsvpDeadline: "Confirme até 31 de outubro",
+  rsvpDeadline: "Confirme até 25 de outubro",
   mapsQuery: "Buffet Castelo, R. Amazonas, 1320 - Oswaldo Cruz, São Caetano do Sul - SP",
 };
 
@@ -16,7 +16,6 @@ $("#rsvpLink").href = `${waBase}?text=${encodeURIComponent(CONFIG.rsvpMessage)}`
 $("#rsvpDeadline").textContent = CONFIG.rsvpDeadline;
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONFIG.mapsQuery)}`;
-$("#mapLink").href = mapsUrl;
 $("#placeLink").href = mapsUrl;
 
 /* ----- Música ----- */
